@@ -71,6 +71,22 @@ Se ejecutó el plan de refactor completo:
 - "Mercería" en color acento dorado (`var(--accent)`)
 - No depende de ningún archivo de imagen
 
+### Sesión 5 — Formulario de contacto real + fixes (2026-03-16)
+
+**Formulario de contacto:**
+- Reemplazó `mailto:` por `fetch POST` a Google Apps Script (relay de Gmail)
+- Campos: Nombre *, Email *, Teléfono (opcional), Mensaje *
+- `mode: 'no-cors'` + `Content-Type: text/plain` para evitar CORS del redirect de Apps Script
+- Estados nuevos: `formEnviando` (loading), `formErrorEnvio` (fallback rojo)
+- Botón muestra "Enviando..." durante el request, deshabilitado hasta terminar
+- El mail llega a `darioramadan@gmail.com` con `replyTo` del visitante
+- Script GAS en `.claude/contacto_script.gs` (ya deployado)
+- URL activa: `https://script.google.com/macros/s/AKfycbyTa6VtIhOd647XLGnoec8n0OZTa88E99wtYTyCq8Tt1Zr3D69lkWK11SfXB8fy8G9J/exec`
+- **Nota**: cada vez que se modifique el script GAS hay que republicar como nueva versión y actualizar la URL en `store.js`
+
+**Fix logo fondo blanco (GitHub Pages):**
+- `mix-blend-mode: multiply` en `.navbar-logo-icon` — el blanco del PNG se funde con el fondo crema de la navbar
+
 ### Sesión 4 — Navbar, logo y carrusel (2026-03-16)
 
 **Logo:**
