@@ -121,10 +121,13 @@
   <header>
     <nav class="navbar">
       <a href="#inicio" class="navbar-logo">
-        Chloe <span>Mercería</span>
-        <img src="imagenes/icon.png" alt="" class="navbar-logo-icon" aria-hidden="true" />
+        <img src="imagenes/logo.png" alt="Chloe Mercería" class="navbar-logo-icon" />
       </a>
       <div class="navbar-actions">
+        <button class="icon-btn hamburger-btn" @click="menuOpen = !menuOpen" :aria-expanded="menuOpen" aria-label="Menú categorías">
+          <svg x-show="!menuOpen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <svg x-show="menuOpen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
         <div class="search-wrap">
           <input
             class="search-input"
@@ -145,6 +148,15 @@
         </button>
       </div>
     </nav>
+    <!-- MENÚ CATEGORÍAS -->
+    <div class="nav-menu" :class="{ open: menuOpen }">
+      <div class="nav-menu-inner">
+        <button class="nav-menu-item" :class="{ active: filtroActivo === 'Todos' }" @click="activarFiltro('Todos')">Todos los productos</button>
+        <template x-for="cat in CATEGORIAS" :key="cat">
+          <button class="nav-menu-item" :class="{ active: filtroActivo === cat }" @click="activarFiltro(cat)" x-text="cat"></button>
+        </template>
+      </div>
+    </div>
   </header>
 
   <main>
@@ -163,35 +175,54 @@
       </div>
     </section>
 
-    <!-- PRODUCTO DESTACADO -->
-    <section class="destacado-section" id="destacado" aria-label="Producto destacado del mes">
+    <!-- PRODUCTOS DESTACADOS DEL MES -->
+    <section class="destacado-section" id="destacado" aria-label="Productos destacados del mes">
       <div class="container">
-        <div class="destacado-inner">
-          <div class="destacado-img-wrap">
-            <img :src="destacado.imagen" :alt="destacado.nombre" width="800" height="500" />
+        <div class="carrusel-wrap">
+          <button class="carrusel-btn" @click="prevSlide()" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="carrusel-viewport">
+            <template x-for="(dest, idx) in destacados" :key="dest.id">
+              <div class="destacado-inner" x-show="slidActivo === idx">
+                <div class="destacado-img-wrap">
+                  <img :src="dest.imagen" :alt="dest.nombre" width="800" height="500" />
+                </div>
+                <div class="destacado-texto">
+                  <span class="destacado-badge">⭐ Destacado del mes</span>
+                  <div class="destacado-nombre" x-text="dest.nombre"></div>
+                  <p class="destacado-desc" x-text="dest.descripcion"></p>
+                  <div class="destacado-precio" x-text="formatPrecio(dest.precio)"></div>
+                  <div class="destacado-qty-row">
+                    <button class="qty-btn" @click="setCantDestacado(dest.id, getCantDestacado(dest.id) - 1)">−</button>
+                    <input
+                      class="qty-input"
+                      type="number" min="1"
+                      :value="getCantDestacado(dest.id)"
+                      @input="setCantDestacado(dest.id, $event.target.value)"
+                      @change="setCantDestacado(dest.id, $event.target.value)"
+                    />
+                    <button class="qty-btn" @click="setCantDestacado(dest.id, getCantDestacado(dest.id) + 1)">+</button>
+                  </div>
+                  <button
+                    class="btn-primary"
+                    :style="addedDestacados[dest.id] ? 'background:#5a9e6f' : ''"
+                    @click="agregarDestacado(dest)"
+                  >
+                    <span x-text="addedDestacados[dest.id] ? '¡Agregado! ✓' : 'Agregar al carrito'"></span>
+                  </button>
+                </div>
+              </div>
+            </template>
           </div>
-          <div class="destacado-texto">
-            <span class="destacado-badge">⭐ Destacado del mes</span>
-            <div class="destacado-nombre" x-text="destacado.nombre"></div>
-            <p class="destacado-desc" x-text="destacado.descripcion"></p>
-            <div class="destacado-precio" x-text="formatPrecio(destacado.precio)"></div>
-            <div class="destacado-qty-row">
-              <button class="qty-btn" @click="cantidadDestacado = Math.max(1, cantidadDestacado - 1)">−</button>
-              <input
-                class="qty-input"
-                type="number" min="1"
-                x-model.number="cantidadDestacado"
-              />
-              <button class="qty-btn" @click="cantidadDestacado++">+</button>
-            </div>
-            <button
-              class="btn-primary"
-              :style="addedDestacado ? 'background:#5a9e6f' : ''"
-              @click="agregarDestacado()"
-            >
-              <span x-text="addedDestacado ? '¡Agregado! ✓' : 'Agregar al carrito'"></span>
-            </button>
-          </div>
+          <button class="carrusel-btn" @click="nextSlide()" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+        <div class="carrusel-dots">
+          <template x-for="(_, idx) in destacados" :key="idx">
+            <button class="carrusel-dot" :class="{ active: slidActivo === idx }" @click="slidActivo = idx" :aria-label="'Ir al producto ' + (idx + 1)"></button>
+          </template>
         </div>
       </div>
     </section>

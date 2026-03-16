@@ -1,14 +1,32 @@
 /* ===== ZONA DE EDICIÓN — modificá acá sin tocar el resto del código ===== */
 
-// Producto destacado del mes
-const DESTACADO = {
-  id: 0,
-  nombre: "Lana Merino Premium 100g",
-  descripcion: "Ideal para tejido fino. Suave, lavable, disponible en 20 colores.",
-  precio: 3500,
-  categoria: "Lanas",
-  imagen: "imagenes/productos/lana-merino-destacado.svg"
-};
+// Productos destacados del mes (carrusel de 3)
+const DESTACADOS = [
+  {
+    id: -1,
+    nombre: "Lana Merino Premium 100g",
+    descripcion: "Ideal para tejido fino. Suave, lavable, disponible en 20 colores.",
+    precio: 3500,
+    categoria: "Lanas",
+    imagen: "imagenes/productos/lana-merino-destacado.svg"
+  },
+  {
+    id: -2,
+    nombre: "Agujas crochet set x10",
+    descripcion: "Aluminio ergonómico, tallas 2mm–8mm. Perfectas para principiantes y expertas.",
+    precio: 1800,
+    categoria: "Agujas",
+    imagen: "imagenes/productos/agujas-crochet.svg"
+  },
+  {
+    id: -3,
+    nombre: "Tela algodón estampada 1m",
+    descripcion: "Estampado floral primaveral, 1.40m de ancho. Fresca y fácil de coser.",
+    precio: 2200,
+    categoria: "Telas",
+    imagen: "imagenes/productos/tela-algodon.svg"
+  },
+];
 
 // Categorías (orden en que aparecen en filtros y grilla de categorías)
 const CATEGORIAS = ["Lanas", "Hilos", "Agujas", "Cintas", "Botones", "Telas", "Accesorios"];

@@ -3,15 +3,17 @@ function tienda() {
     // Estado
     CATEGORIAS,
     PRODUCTOS,
-    destacado: { ...DESTACADO },
+    destacados: DESTACADOS,
+    slidActivo: 0,
     carrito: [],
     carritoOpen: false,
+    menuOpen: false,
     busqueda: '',
     filtroActivo: 'Todos',
     addedMap: {},
-    addedDestacado: false,
-    cantidades: {},        // qty selector en cada product card
-    cantidadDestacado: 1, // qty selector del destacado
+    addedDestacados: {},
+    cantidades: {},
+    cantidadesDestacado: {},
     searchOpen: false,
     form: { nombre: '', email: '', mensaje: '' },
     formErrors: {},
@@ -46,14 +48,18 @@ function tienda() {
       this.addedMap[p.id] = true;
       setTimeout(() => { this.addedMap[p.id] = false; }, 1500);
     },
-    agregarDestacado() {
-      const qty = Math.max(1, this.cantidadDestacado);
-      const ex  = this.carrito.find(i => i.id === this.destacado.id);
+    agregarDestacado(prod) {
+      const qty = this.getCantDestacado(prod.id);
+      const ex  = this.carrito.find(i => i.id === prod.id);
       if (ex) { ex.cantidad += qty; }
-      else     { this.carrito.push({ ...this.destacado, cantidad: qty }); }
-      this.addedDestacado = true;
-      setTimeout(() => { this.addedDestacado = false; }, 1500);
+      else     { this.carrito.push({ ...prod, cantidad: qty }); }
+      this.addedDestacados[prod.id] = true;
+      setTimeout(() => { this.addedDestacados[prod.id] = false; }, 1500);
     },
+    getCantDestacado(id)      { return this.cantidadesDestacado[id] || 1; },
+    setCantDestacado(id, val) { this.cantidadesDestacado[id] = Math.max(1, parseInt(val) || 1); },
+    prevSlide() { this.slidActivo = (this.slidActivo - 1 + this.destacados.length) % this.destacados.length; },
+    nextSlide() { this.slidActivo = (this.slidActivo + 1) % this.destacados.length; },
     incrementar(id) {
       const i = this.carrito.find(x => x.id === id);
       if (i) i.cantidad++;
@@ -80,6 +86,7 @@ function tienda() {
     // Filtros
     activarFiltro(cat) {
       this.filtroActivo = this.filtroActivo === cat ? 'Todos' : cat;
+      this.menuOpen = false;
       document.getElementById('productos').scrollIntoView({ behavior: 'smooth' });
     },
 
