@@ -15,7 +15,7 @@ function tienda() {
     cantidades: {},
     cantidadesDestacado: {},
     searchOpen: false,
-    form: { nombre: '', email: '', mensaje: '' },
+    form: { nombre: '', email: '', telefono: '', mensaje: '' },
     formErrors: {},
     formEnviado: false,
     formEnviando: false,
@@ -127,9 +127,10 @@ function tienda() {
           mode:    'no-cors',
           headers: { 'Content-Type': 'text/plain' },
           body:    JSON.stringify({
-            nombre:  this.form.nombre,
-            email:   this.form.email,
-            mensaje: this.form.mensaje,
+            nombre:   this.form.nombre,
+            email:    this.form.email,
+            telefono: this.form.telefono,
+            mensaje:  this.form.mensaje,
           }),
         });
         this.formEnviado = true;

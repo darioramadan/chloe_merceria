@@ -15,8 +15,9 @@ function doPost(e) {
       subject: 'Consulta desde Chloe Mercería — ' + data.nombre,
       replyTo: data.email,
       body:
-        'Nombre:  ' + data.nombre  + '\n' +
-        'Email:   ' + data.email   + '\n\n' +
+        'Nombre:    ' + data.nombre    + '\n' +
+        'Email:     ' + data.email     + '\n' +
+        'Teléfono:  ' + (data.telefono || '—') + '\n\n' +
         'Mensaje:\n' + data.mensaje,
     });
 
