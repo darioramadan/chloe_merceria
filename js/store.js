@@ -18,6 +18,8 @@ function tienda() {
     form: { nombre: '', email: '', mensaje: '' },
     formErrors: {},
     formEnviado: false,
+    formEnviando: false,
+    formErrorEnvio: false,
 
     // Computed
     get cantidadTotal() {
@@ -100,9 +102,13 @@ function tienda() {
     formatPrecio(n)   { return formatPrecio(n); },
     iconoCat(cat)     { return iconoCat(cat); },
 
-    // Contacto
-    enviarContacto() {
+    // Contacto — relay via Google Apps Script
+    // Reemplazá SCRIPT_URL con la URL de tu Web App (script.google.com)
+    async enviarContacto() {
+      const SCRIPT_URL = 'TU_URL_DEL_SCRIPT';
+
       this.formErrors = {};
+      this.formErrorEnvio = false;
       if (!this.form.nombre.trim())  this.formErrors.nombre  = 'El nombre es requerido.';
       if (!this.form.email.trim()) {
         this.formErrors.email = 'El email es requerido.';
@@ -112,10 +118,26 @@ function tienda() {
       if (!this.form.mensaje.trim()) this.formErrors.mensaje = 'El mensaje es requerido.';
       if (Object.keys(this.formErrors).length) return;
 
-      const subject = 'Consulta desde la web';
-      const body    = `Nombre: ${this.form.nombre}\nEmail: ${this.form.email}\n\n${this.form.mensaje}`;
-      window.location.href = `mailto:chloemerceria@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      this.formEnviado = true;
+      this.formEnviando = true;
+      try {
+        // mode: 'no-cors' evita el error CORS del redirect de Apps Script.
+        // No podemos leer la respuesta, pero el mail se envía igual.
+        await fetch(SCRIPT_URL, {
+          method:  'POST',
+          mode:    'no-cors',
+          headers: { 'Content-Type': 'text/plain' },
+          body:    JSON.stringify({
+            nombre:  this.form.nombre,
+            email:   this.form.email,
+            mensaje: this.form.mensaje,
+          }),
+        });
+        this.formEnviado = true;
+      } catch {
+        this.formErrorEnvio = true;
+      } finally {
+        this.formEnviando = false;
+      }
     },
   };
 }

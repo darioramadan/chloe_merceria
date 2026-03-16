@@ -389,7 +389,12 @@
                 ></textarea>
                 <span class="field-error" x-show="formErrors.mensaje" x-text="formErrors.mensaje"></span>
               </div>
-              <button type="submit" class="btn-submit">Enviar consulta</button>
+              <button type="submit" class="btn-submit" :disabled="formEnviando">
+                <span x-text="formEnviando ? 'Enviando...' : 'Enviar consulta'"></span>
+              </button>
+              <div class="form-error" x-show="formErrorEnvio">
+                Hubo un error al enviar. Intentá de nuevo o escribinos por WhatsApp.
+              </div>
             </form>
           </template>
           <template x-if="formEnviado">
