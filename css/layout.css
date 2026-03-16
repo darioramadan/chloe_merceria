@@ -9,7 +9,7 @@
 .navbar-logo {
   display: flex; align-items: center;
 }
-.navbar-logo-icon { height: 54px; width: auto; object-fit: contain; flex-shrink: 0; }
+.navbar-logo-icon { height: 54px; width: auto; object-fit: contain; flex-shrink: 0; mix-blend-mode: multiply; }
 .navbar-left { display: flex; align-items: center; gap: 0.5rem; }
 .navbar-actions { display: flex; align-items: center; gap: 0.75rem; }
 
