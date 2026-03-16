@@ -71,15 +71,38 @@ Se ejecutó el plan de refactor completo:
 - "Mercería" en color acento dorado (`var(--accent)`)
 - No depende de ningún archivo de imagen
 
+### Sesión 4 — Navbar, logo y carrusel (2026-03-16)
+
+**Logo:**
+- Reemplazado SVG inline por `<img src="imagenes/logo.png">` (archivo externo)
+- Tamaño: 54px de alto en navbar
+
+**Carrusel de destacados:**
+- `DESTACADO` (objeto único) → `DESTACADOS` (array de 3 productos)
+- Productos: Lana Merino Premium / Agujas crochet set x10 / Tela algodón estampada
+- IDs negativos (-1, -2, -3) para no colisionar con PRODUCTOS
+- Estado: `slidActivo` (índice activo), `cantidadesDestacado{}`, `addedDestacados{}`
+- Métodos: `prevSlide()`, `nextSlide()`, `getCantDestacado(id)`, `setCantDestacado(id, val)`
+- UI: flechas ← → a los lados + dots debajo
+
+**Menú hamburguesa:**
+- Botón a la IZQUIERDA del logo (en `.navbar-left` junto al logo)
+- Sidebar izquierdo que desliza desde la izquierda (como el drawer del carrito pero al revés)
+- Muestra las mismas categorías que "Nuestros productos" + "Todos los productos"
+- Cierra al seleccionar categoría (`activarFiltro` incluye `this.menuOpen = false`)
+- El overlay existente también cubre el menu (`carritoOpen || menuOpen`)
+- Estado: `menuOpen: false` en store.js
+
 ## Archivos clave
 
 | Archivo | Qué contiene |
 |---------|-------------|
-| `js/data.js` | **ZONA DE EDICIÓN** — DESTACADO, CATEGORIAS, PRODUCTOS con rutas SVG |
+| `js/data.js` | **ZONA DE EDICIÓN** — DESTACADOS (array 3), CATEGORIAS, PRODUCTOS con rutas SVG |
 | `js/utils.js` | formatPrecio, iconoCat, generarNroPedido |
 | `js/store.js` | tienda() — el Alpine component completo |
 | `css/variables.css` | :root con custom properties |
-| `css/components.css` | El archivo más grande — cards, botones, drawer, form |
+| `css/layout.css` | Navbar, hero, footer, nav-menu (sidebar) |
+| `css/components.css` | El archivo más grande — cards, botones, drawer, form, carrusel |
 
 ## Datos de contacto (en el código)
 - WhatsApp: +5491132607001
@@ -93,8 +116,8 @@ Editar `js/data.js`, agregar un objeto al array `PRODUCTOS`:
 ```
 Y crear el SVG correspondiente en `imagenes/productos/`.
 
-## Para cambiar el destacado del mes
-Editar el objeto `DESTACADO` en `js/data.js` (id, nombre, descripcion, precio, categoria, imagen).
+## Para cambiar los destacados del mes
+Editar el array `DESTACADOS` en `js/data.js` (hasta 3 objetos con id negativo, nombre, descripcion, precio, categoria, imagen).
 
 ## Pendiente / posibles mejoras
 - **[PENDIENTE]** Opción A — precios desde Google Sheets publicado como CSV: fetch al cargar → sobreescribe PRODUCTOS. Sin backend, cambios en la Sheet se reflejan automáticamente. Ya se usa Google Sheets en bot_chloe.

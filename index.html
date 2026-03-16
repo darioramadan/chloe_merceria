@@ -71,7 +71,7 @@
 <body x-data="tienda()" x-cloak>
 
   <!-- OVERLAY CARRITO -->
-  <div class="overlay" :class="{ open: carritoOpen }" @click="carritoOpen = false"></div>
+  <div class="overlay" :class="{ open: carritoOpen || menuOpen }" @click="carritoOpen = false; menuOpen = false;"></div>
 
   <!-- DRAWER CARRITO -->
   <aside class="drawer" :class="{ open: carritoOpen }" role="dialog" aria-label="Carrito de compras">
@@ -120,14 +120,16 @@
   <!-- NAVBAR -->
   <header>
     <nav class="navbar">
-      <a href="#inicio" class="navbar-logo">
-        <img src="imagenes/logo.png" alt="Chloe Mercería" class="navbar-logo-icon" />
-      </a>
-      <div class="navbar-actions">
+      <div class="navbar-left">
         <button class="icon-btn hamburger-btn" @click="menuOpen = !menuOpen" :aria-expanded="menuOpen" aria-label="Menú categorías">
           <svg x-show="!menuOpen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
           <svg x-show="menuOpen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M18 6 6 18M6 6l12 12"/></svg>
         </button>
+        <a href="#inicio" class="navbar-logo">
+          <img src="imagenes/logo.png" alt="Chloe Mercería" class="navbar-logo-icon" />
+        </a>
+      </div>
+      <div class="navbar-actions">
         <div class="search-wrap">
           <input
             class="search-input"
