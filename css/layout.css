@@ -1,0 +1,94 @@
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(250,247,242,0.96); backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(201,120,92,0.12);
+  padding: 0 clamp(1rem, 4vw, 2.5rem);
+  height: 64px; display: flex; align-items: center; justify-content: space-between;
+}
+.navbar-logo {
+  display: flex; align-items: center; gap: 0.45rem;
+  font-family: 'Playfair Display', serif; font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-weight: 700; color: var(--primary); letter-spacing: 0.01em;
+}
+.navbar-logo-icon { height: 32px; width: auto; object-fit: contain; flex-shrink: 0; }
+.navbar-logo span { color: var(--accent); }
+.navbar-actions { display: flex; align-items: center; gap: 0.75rem; }
+.search-wrap { display: flex; align-items: center; position: relative; }
+.search-input {
+  width: 0; overflow: hidden; opacity: 0; transition: width 0.3s ease, opacity 0.3s ease;
+  border: 1.5px solid var(--primary); border-radius: 24px; padding: 0; background: var(--white);
+  font-size: 0.85rem; color: var(--text);
+}
+.search-input.open { width: clamp(140px, 22vw, 220px); opacity: 1; padding: 0.3rem 0.75rem; }
+.icon-btn {
+  background: transparent; border: none; padding: 0.4rem; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; color: var(--text);
+  transition: background var(--transition), color var(--transition);
+}
+.icon-btn:hover { background: var(--bg-alt); color: var(--primary); }
+.cart-btn { position: relative; }
+.cart-badge {
+  position: absolute; top: -4px; right: -4px; background: var(--primary);
+  color: white; border-radius: 50%; width: 18px; height: 18px;
+  font-size: 0.65rem; font-weight: 700; display: flex; align-items: center; justify-content: center;
+}
+
+/* ===== HERO ===== */
+.hero {
+  margin-top: 64px; min-height: 88vh; display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, #FAF7F2 0%, #F5EFE6 50%, #EDD9C8 100%);
+}
+.hero-texture {
+  position: absolute; inset: 0; opacity: 0.35;
+  background-image: radial-gradient(circle, #C9785C 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.hero-content {
+  position: relative; z-index: 1; text-align: center;
+  padding: clamp(2rem, 6vw, 4rem) clamp(1.5rem, 5vw, 3rem);
+  max-width: 700px;
+}
+.hero-eyebrow {
+  display: inline-block; background: var(--primary); color: white;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.3rem 1rem; border-radius: 20px; margin-bottom: 1.25rem;
+}
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 700; color: var(--text);
+  line-height: 1.15; margin-bottom: 1rem;
+}
+.hero h1 span { color: var(--primary); }
+.hero p {
+  font-size: clamp(1rem, 2vw, 1.2rem); color: var(--text-light);
+  margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--text); color: rgba(255,255,255,0.85);
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1rem, 5vw, 4rem);
+}
+.footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2.5rem;
+}
+@media (max-width: 680px) { .footer-inner { grid-template-columns: 1fr; } }
+.footer-logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: white; margin-bottom: 0.5rem; }
+.footer-tagline { font-size: 0.85rem; color: rgba(255,255,255,0.55); margin-bottom: 1.25rem; }
+.footer-social { display: flex; gap: 0.75rem; }
+.social-btn {
+  width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1);
+  display: flex; align-items: center; justify-content: center; transition: background var(--transition);
+}
+.social-btn:hover { background: var(--primary); }
+.social-btn svg { color: white; width: 18px; height: 18px; }
+.footer-col h5 { font-family: 'Playfair Display', serif; font-size: 1rem; color: white; margin-bottom: 1rem; }
+.footer-col p, .footer-col a { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 2; display: block; }
+.footer-col a:hover { color: var(--accent); }
+.footer-bottom {
+  max-width: 1100px; margin: 2.5rem auto 0;
+  border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.25rem;
+  font-size: 0.78rem; color: rgba(255,255,255,0.35); text-align: center;
+}

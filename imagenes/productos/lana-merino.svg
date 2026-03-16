@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#F2E4D8"/>
+  <!-- Skein outer oval -->
+  <ellipse cx="200" cy="142" rx="100" ry="65" fill="#C9785C" opacity="0.1"/>
+  <ellipse cx="200" cy="142" rx="100" ry="65" fill="none" stroke="#C9785C" stroke-width="2.8"/>
+  <!-- Inner oval (hole) -->
+  <ellipse cx="200" cy="142" rx="38" ry="22" fill="#F2E4D8" stroke="#C9785C" stroke-width="2"/>
+  <!-- Wound thread lines -->
+  <ellipse cx="200" cy="142" rx="100" ry="65" fill="none" stroke="#C9785C" stroke-width="1.2" opacity="0.4" transform="rotate(15,200,142)"/>
+  <ellipse cx="200" cy="142" rx="100" ry="65" fill="none" stroke="#C9785C" stroke-width="1.2" opacity="0.4" transform="rotate(-15,200,142)"/>
+  <ellipse cx="200" cy="142" rx="100" ry="65" fill="none" stroke="#C9785C" stroke-width="1.2" opacity="0.4" transform="rotate(30,200,142)"/>
+  <ellipse cx="200" cy="142" rx="100" ry="65" fill="none" stroke="#C9785C" stroke-width="1.2" opacity="0.4" transform="rotate(-30,200,142)"/>
+  <!-- Tie band in center -->
+  <rect x="188" y="116" width="24" height="52" rx="6" fill="#C9785C" opacity="0.55"/>
+  <!-- Label -->
+  <text x="200" y="248" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#7A4838" font-weight="700" letter-spacing="0.5">Lana Merino 100g</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#E8EDF2"/>
+  <!-- Fan arrangement of 5 crochet hooks -->
+  <!-- Hook 1 (leftmost) -->
+  <g transform="rotate(-30,200,240)">
+    <rect x="194" y="62" width="12" height="145" rx="5" fill="#7B9BAF"/>
+    <path d="M194 62 Q188 50 196 44 Q204 38 208 50 Q204 56 200 58" fill="#7B9BAF"/>
+    <ellipse cx="200" cy="207" rx="7" ry="10" fill="#B0C4D4" opacity="0.8"/>
+  </g>
+  <!-- Hook 2 -->
+  <g transform="rotate(-15,200,240)">
+    <rect x="194" y="58" width="12" height="150" rx="5" fill="#7B9BAF"/>
+    <path d="M194 58 Q188 46 196 40 Q204 34 208 46 Q204 52 200 54" fill="#7B9BAF"/>
+    <ellipse cx="200" cy="208" rx="7" ry="10" fill="#B0C4D4" opacity="0.8"/>
+  </g>
+  <!-- Hook 3 (center) -->
+  <rect x="194" y="55" width="12" height="155" rx="5" fill="#5A7F96"/>
+  <path d="M194 55 Q187 43 196 36 Q205 29 209 42 Q205 48 200 51" fill="#5A7F96"/>
+  <ellipse cx="200" cy="210" rx="7" ry="10" fill="#A0B8CC" opacity="0.9"/>
+  <!-- Hook 4 -->
+  <g transform="rotate(15,200,240)">
+    <rect x="194" y="58" width="12" height="150" rx="5" fill="#7B9BAF"/>
+    <path d="M194 58 Q188 46 196 40 Q204 34 208 46 Q204 52 200 54" fill="#7B9BAF"/>
+    <ellipse cx="200" cy="208" rx="7" ry="10" fill="#B0C4D4" opacity="0.8"/>
+  </g>
+  <!-- Hook 5 (rightmost) -->
+  <g transform="rotate(30,200,240)">
+    <rect x="194" y="62" width="12" height="145" rx="5" fill="#7B9BAF"/>
+    <path d="M194 62 Q188 50 196 44 Q204 38 208 50 Q204 56 200 58" fill="#7B9BAF"/>
+    <ellipse cx="200" cy="207" rx="7" ry="10" fill="#B0C4D4" opacity="0.8"/>
+  </g>
+  <!-- Label -->
+  <text x="200" y="278" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#3A5C70" font-weight="700" letter-spacing="0.5">Agujas Crochet Set x10</text>
+</svg>

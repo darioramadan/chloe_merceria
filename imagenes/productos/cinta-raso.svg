@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#F5E8EF"/>
+  <!-- Left bow loop -->
+  <path d="M200 142 C180 110 120 100 105 120 C90 140 110 168 145 162 C170 158 200 142 200 142Z"
+        fill="#C97C96" opacity="0.75" stroke="#C97C96" stroke-width="1.5"/>
+  <path d="M200 142 C185 118 130 112 118 128 C108 142 120 158 148 155"
+        fill="none" stroke="#F5E8EF" stroke-width="1.5" opacity="0.5"/>
+  <!-- Right bow loop -->
+  <path d="M200 142 C220 110 280 100 295 120 C310 140 290 168 255 162 C230 158 200 142 200 142Z"
+        fill="#C97C96" opacity="0.75" stroke="#C97C96" stroke-width="1.5"/>
+  <path d="M200 142 C215 118 270 112 282 128 C292 142 280 158 252 155"
+        fill="none" stroke="#F5E8EF" stroke-width="1.5" opacity="0.5"/>
+  <!-- Left tail -->
+  <path d="M200 145 C185 155 155 170 140 195 C135 205 145 210 155 200 C170 185 200 165 200 145Z"
+        fill="#C97C96" opacity="0.65"/>
+  <!-- Right tail -->
+  <path d="M200 145 C215 155 245 170 260 195 C265 205 255 210 245 200 C230 185 200 165 200 145Z"
+        fill="#C97C96" opacity="0.65"/>
+  <!-- Center knot -->
+  <ellipse cx="200" cy="142" rx="14" ry="12" fill="#E08AAA" stroke="#C97C96" stroke-width="2"/>
+  <!-- Shine highlight -->
+  <path d="M193 135 Q200 130 207 135" fill="none" stroke="white" stroke-width="1.5" opacity="0.6"/>
+  <!-- Label -->
+  <text x="200" y="264" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#8B4060" font-weight="700" letter-spacing="0.5">Cinta de Raso 2cm × 5m</text>
+</svg>

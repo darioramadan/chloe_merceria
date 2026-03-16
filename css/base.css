@@ -1,0 +1,16 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+img { display: block; max-width: 100%; object-fit: cover; }
+button { cursor: pointer; font-family: 'Inter', sans-serif; border: none; outline: none; }
+input, textarea { font-family: 'Inter', sans-serif; outline: none; }
+a { text-decoration: none; color: inherit; }
+
+.container { max-width: 1200px; margin: 0 auto; }
+section { padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 5vw, 4rem); }
+.section-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; color: var(--text);
+  margin-bottom: 0.5rem;
+}
+.section-sub { color: var(--text-light); font-size: 1rem; margin-bottom: 2.5rem; }

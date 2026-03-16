@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#E8EDF2"/>
+  <!-- Left needle (diagonal ↘) -->
+  <line x1="100" y1="52" x2="300" y2="248" stroke="#B5955C" stroke-width="9" stroke-linecap="round"/>
+  <!-- Left needle - bamboo segments -->
+  <line x1="126" y1="78" x2="136" y2="68" stroke="#8B6F3A" stroke-width="2" opacity="0.6"/>
+  <line x1="158" y1="110" x2="168" y2="100" stroke="#8B6F3A" stroke-width="2" opacity="0.6"/>
+  <line x1="190" y1="142" x2="200" y2="132" stroke="#8B6F3A" stroke-width="2" opacity="0.6"/>
+  <line x1="222" y1="174" x2="232" y2="164" stroke="#8B6F3A" stroke-width="2" opacity="0.6"/>
+  <!-- Left needle point -->
+  <circle cx="100" cy="52"  r="5" fill="#7B9BAF"/>
+  <!-- Left needle cap -->
+  <circle cx="300" cy="248" r="9" fill="#C9A85C"/>
+  <!-- Right needle (diagonal ↙) -->
+  <line x1="300" y1="52" x2="100" y2="248" stroke="#C5A86A" stroke-width="9" stroke-linecap="round"/>
+  <!-- Right needle - bamboo segments -->
+  <line x1="274" y1="78" x2="264" y2="68" stroke="#8B6F3A" stroke-width="2" opacity="0.6"/>
+  <line x1="242" y1="110" x2="232" y2="100" stroke="#8B6F3A" stroke-width="2" opacity="0.6"/>
+  <line x1="210" y1="142" x2="200" y2="132" stroke="#8B6F3A" stroke-width="2" opacity="0.6"/>
+  <line x1="178" y1="174" x2="168" y2="164" stroke="#8B6F3A" stroke-width="2" opacity="0.6"/>
+  <!-- Right needle point -->
+  <circle cx="300" cy="52"  r="5" fill="#7B9BAF"/>
+  <!-- Right needle cap -->
+  <circle cx="100" cy="248" r="9" fill="#C9A85C"/>
+  <!-- Label -->
+  <text x="200" y="286" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#3A5C70" font-weight="700" letter-spacing="0.5">Agujas de Tejer Bambú</text>
+</svg>

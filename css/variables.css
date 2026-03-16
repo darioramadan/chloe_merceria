@@ -1,0 +1,13 @@
+:root {
+  --primary: #C9785C;
+  --bg: #FAF7F2;
+  --bg-alt: #F5EFE6;
+  --accent: #D4A853;
+  --text: #2C2C2C;
+  --text-light: #6B6B6B;
+  --white: #fff;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+  --shadow-hover: 0 8px 32px rgba(0,0,0,0.14);
+  --radius: 12px;
+  --transition: 0.22s ease;
+}

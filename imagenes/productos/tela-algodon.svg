@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#E8EFE4"/>
+  <!-- Folded fabric piece -->
+  <rect x="80" y="72" width="240" height="168" rx="4" fill="#C8DFC0" stroke="#7B9B6F" stroke-width="2"/>
+  <!-- Fabric grid weave lines horizontal -->
+  <line x1="80" y1="90" x2="320" y2="90" stroke="#7B9B6F" stroke-width="0.8" opacity="0.35"/>
+  <line x1="80" y1="108" x2="320" y2="108" stroke="#7B9B6F" stroke-width="0.8" opacity="0.35"/>
+  <line x1="80" y1="126" x2="320" y2="126" stroke="#7B9B6F" stroke-width="0.8" opacity="0.35"/>
+  <line x1="80" y1="144" x2="320" y2="144" stroke="#7B9B6F" stroke-width="0.8" opacity="0.35"/>
+  <line x1="80" y1="162" x2="320" y2="162" stroke="#7B9B6F" stroke-width="0.8" opacity="0.35"/>
+  <line x1="80" y1="180" x2="320" y2="180" stroke="#7B9B6F" stroke-width="0.8" opacity="0.35"/>
+  <line x1="80" y1="198" x2="320" y2="198" stroke="#7B9B6F" stroke-width="0.8" opacity="0.35"/>
+  <line x1="80" y1="216" x2="320" y2="216" stroke="#7B9B6F" stroke-width="0.8" opacity="0.35"/>
+  <!-- Fabric grid weave lines vertical -->
+  <line x1="106" y1="72" x2="106" y2="240" stroke="#7B9B6F" stroke-width="0.8" opacity="0.35"/>
+  <line x1="132" y1="72" x2="132" y2="240" stroke="#7B9B6F" stroke-width="0.8" opacity="0.35"/>
+  <line x1="158" y1="72" x2="158" y2="240" stroke="#7B9B6F" stroke-width="0.8" opacity="0.35"/>
+  <line x1="184" y1="72" x2="184" y2="240" stroke="#7B9B6F" stroke-width="0.8" opacity="0.35"/>
+  <line x1="210" y1="72" x2="210" y2="240" stroke="#7B9B6F" stroke-width="0.8" opacity="0.35"/>
+  <line x1="236" y1="72" x2="236" y2="240" stroke="#7B9B6F" stroke-width="0.8" opacity="0.35"/>
+  <line x1="262" y1="72" x2="262" y2="240" stroke="#7B9B6F" stroke-width="0.8" opacity="0.35"/>
+  <line x1="288" y1="72" x2="288" y2="240" stroke="#7B9B6F" stroke-width="0.8" opacity="0.35"/>
+  <!-- Floral pattern dots (scattered) -->
+  <circle cx="119" cy="99" r="5" fill="#7B9B6F" opacity="0.55"/>
+  <circle cx="171" cy="117" r="5" fill="#A0C890" opacity="0.7"/>
+  <circle cx="145" cy="153" r="5" fill="#7B9B6F" opacity="0.55"/>
+  <circle cx="223" cy="135" r="6" fill="#A0C890" opacity="0.7"/>
+  <circle cx="197" cy="99"  r="4" fill="#7B9B6F" opacity="0.5"/>
+  <circle cx="275" cy="108" r="5" fill="#A0C890" opacity="0.7"/>
+  <circle cx="249" cy="162" r="5" fill="#7B9B6F" opacity="0.55"/>
+  <circle cx="171" cy="189" r="5" fill="#A0C890" opacity="0.7"/>
+  <circle cx="301" cy="180" r="4" fill="#7B9B6F" opacity="0.5"/>
+  <circle cx="119" cy="207" r="5" fill="#A0C890" opacity="0.7"/>
+  <circle cx="223" cy="207" r="5" fill="#7B9B6F" opacity="0.55"/>
+  <!-- Fold crease at top -->
+  <path d="M80 72 Q200 82 320 72" fill="none" stroke="#7B9B6F" stroke-width="1.8" opacity="0.5"/>
+  <!-- Label -->
+  <text x="200" y="272" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#3D6030" font-weight="700" letter-spacing="0.5">Tela Algodón Estampada</text>
+</svg>

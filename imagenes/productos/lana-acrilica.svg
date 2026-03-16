@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#F2E4D8"/>
+  <!-- Ball of yarn - fill -->
+  <circle cx="200" cy="138" r="88" fill="#C9785C" opacity="0.15"/>
+  <circle cx="200" cy="138" r="88" fill="none" stroke="#C9785C" stroke-width="2.5"/>
+  <!-- Winding lines horizontal -->
+  <ellipse cx="200" cy="138" rx="88" ry="30" fill="none" stroke="#C9785C" stroke-width="1.8" opacity="0.65"/>
+  <ellipse cx="200" cy="108" rx="68" ry="18" fill="none" stroke="#C9785C" stroke-width="1.3" opacity="0.45"/>
+  <ellipse cx="200" cy="168" rx="68" ry="18" fill="none" stroke="#C9785C" stroke-width="1.3" opacity="0.45"/>
+  <!-- Winding lines vertical -->
+  <ellipse cx="200" cy="138" rx="30" ry="88" fill="none" stroke="#C9785C" stroke-width="1.8" opacity="0.65"/>
+  <ellipse cx="168" cy="138" rx="18" ry="68" fill="none" stroke="#C9785C" stroke-width="1.3" opacity="0.45"/>
+  <ellipse cx="232" cy="138" rx="18" ry="68" fill="none" stroke="#C9785C" stroke-width="1.3" opacity="0.45"/>
+  <!-- Diagonal sweep arcs -->
+  <path d="M148 68 Q200 95 252 68" fill="none" stroke="#C9785C" stroke-width="1.5" opacity="0.5"/>
+  <path d="M130 190 Q200 170 270 190" fill="none" stroke="#C9785C" stroke-width="1.5" opacity="0.5"/>
+  <!-- Loose thread -->
+  <path d="M284 102 C325 80 355 108 348 134 C340 158 318 146 328 168" fill="none" stroke="#C9785C" stroke-width="2.8" stroke-linecap="round"/>
+  <!-- Center highlight -->
+  <circle cx="200" cy="138" r="10" fill="#C9785C" opacity="0.25"/>
+  <!-- Label -->
+  <text x="200" y="266" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#7A4838" font-weight="700" letter-spacing="0.5">Lana Acrílica 50g</text>
+</svg>

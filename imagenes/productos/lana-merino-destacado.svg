@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#F2E4D8"/>
+  <!-- Decorative background dots -->
+  <circle cx="100" cy="100" r="6" fill="#C9785C" opacity="0.12"/>
+  <circle cx="700" cy="100" r="6" fill="#C9785C" opacity="0.12"/>
+  <circle cx="100" cy="400" r="6" fill="#C9785C" opacity="0.12"/>
+  <circle cx="700" cy="400" r="6" fill="#C9785C" opacity="0.12"/>
+  <circle cx="400" cy="60"  r="5" fill="#C9785C" opacity="0.1"/>
+  <circle cx="400" cy="440" r="5" fill="#C9785C" opacity="0.1"/>
+  <!-- Main skein outer oval -->
+  <ellipse cx="400" cy="240" rx="195" ry="125" fill="#C9785C" opacity="0.1"/>
+  <ellipse cx="400" cy="240" rx="195" ry="125" fill="none" stroke="#C9785C" stroke-width="3.5"/>
+  <!-- Inner hole -->
+  <ellipse cx="400" cy="240" rx="70" ry="42" fill="#F2E4D8" stroke="#C9785C" stroke-width="2.5"/>
+  <!-- Wound thread layers -->
+  <ellipse cx="400" cy="240" rx="195" ry="125" fill="none" stroke="#C9785C" stroke-width="1.6" opacity="0.38" transform="rotate(18,400,240)"/>
+  <ellipse cx="400" cy="240" rx="195" ry="125" fill="none" stroke="#C9785C" stroke-width="1.6" opacity="0.38" transform="rotate(-18,400,240)"/>
+  <ellipse cx="400" cy="240" rx="195" ry="125" fill="none" stroke="#C9785C" stroke-width="1.6" opacity="0.38" transform="rotate(36,400,240)"/>
+  <ellipse cx="400" cy="240" rx="195" ry="125" fill="none" stroke="#C9785C" stroke-width="1.6" opacity="0.38" transform="rotate(-36,400,240)"/>
+  <ellipse cx="400" cy="240" rx="155" ry="95" fill="none" stroke="#C9785C" stroke-width="1.2" opacity="0.28" transform="rotate(10,400,240)"/>
+  <ellipse cx="400" cy="240" rx="155" ry="95" fill="none" stroke="#C9785C" stroke-width="1.2" opacity="0.28" transform="rotate(-10,400,240)"/>
+  <!-- Tie band -->
+  <rect x="380" y="192" width="40" height="96" rx="10" fill="#C9785C" opacity="0.6"/>
+  <!-- Premium badge oval -->
+  <ellipse cx="400" cy="430" rx="100" ry="22" fill="#C9785C" opacity="0.12"/>
+  <!-- Label -->
+  <text x="400" y="438" text-anchor="middle" font-family="Georgia,serif" font-size="22" fill="#7A4838" font-weight="700" letter-spacing="1">Lana Merino Premium 100g</text>
+</svg>
