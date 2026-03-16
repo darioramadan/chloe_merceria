@@ -92,6 +92,7 @@ Se ejecutó el plan de refactor completo:
 - Cierra al seleccionar categoría (`activarFiltro` incluye `this.menuOpen = false`)
 - El overlay existente también cubre el menu (`carritoOpen || menuOpen`)
 - Estado: `menuOpen: false` en store.js
+- z-index: `1150` (por encima del overlay `1100`, por debajo del drawer carrito `1200`)
 
 ## Archivos clave
 
@@ -120,6 +121,7 @@ Y crear el SVG correspondiente en `imagenes/productos/`.
 Editar el array `DESTACADOS` en `js/data.js` (hasta 3 objetos con id negativo, nombre, descripcion, precio, categoria, imagen).
 
 ## Pendiente / posibles mejoras
+- **[PRIORIDAD]** Desarrollar backend y completar con productos reales
 - **[PENDIENTE]** Opción A — precios desde Google Sheets publicado como CSV: fetch al cargar → sobreescribe PRODUCTOS. Sin backend, cambios en la Sheet se reflejan automáticamente. Ya se usa Google Sheets en bot_chloe.
 - Crear imagen OG real (1200×630) en `imagenes/og-cover.jpg`
 - Actualizar URL en metas OG/canonical con dominio real cuando esté hosteado
