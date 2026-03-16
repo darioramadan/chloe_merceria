@@ -105,7 +105,7 @@ function tienda() {
     // Contacto — relay via Google Apps Script
     // Reemplazá SCRIPT_URL con la URL de tu Web App (script.google.com)
     async enviarContacto() {
-      const SCRIPT_URL = 'TU_URL_DEL_SCRIPT';
+      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxK_UrzbByYCbX9Ll3-mz39nTdWCfD-XDbSAGCneciqATVNZZRGrxUDEloACe8csvjy/exec';
 
       this.formErrors = {};
       this.formErrorEnvio = false;
